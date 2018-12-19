@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "I do code trying to give benefit to all humankind-tech hopefully, at least for myself :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immsswd/px.git"
+  },
+  "author": "imam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immsswd/px/issues"
+  },
+  "homepage": "https://github.com/immsswd/px#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
