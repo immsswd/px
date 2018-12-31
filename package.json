@@ -2,7 +2,7 @@
   "name": "starter",
   "version": "1.0.0",
   "description": "I do code trying to give benefit to all humankind-tech hopefully, at least for myself :)",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

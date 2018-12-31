@@ -26,6 +26,7 @@ body {
 
 .header {
     height: 95vh;
+    /* width: 100%; */
     background-image: linear-gradient(to right top, rgb(126, 213, 111, 0.8),rgba(40, 180, 133, 0.507)), url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
@@ -49,12 +50,14 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
     backface-visibility: hidden;
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -77,8 +80,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 10px;
-    text-align: center;
-    animation: moveInRight 1s ease-in-out;
+    animation: moveInRight 1s;
 }
 /* heading-primary-main animation */
 @keyframes moveInBottom {
@@ -96,7 +98,8 @@ body {
     /* finish animation */
     100% {
         opacity: 1;
-        transform: translate(0) rotate(180deg);
+        /* transform: translate(0) rotate(180deg); */
+        transform: translate(0);
     }
 }
 /* heading-primary-sub animation */
@@ -108,7 +111,8 @@ body {
     } 
 
     80% {
-        transform: translateY(10px);
+        /* transform: translateY(10px); */
+        opacity: .7;
     }
 
     /* finish animation */
@@ -116,4 +120,68 @@ body {
         opacity: 1;
         transform: translate(0);
     }
+}
+@keyframes moveInleft {
+    /* start */
+    0% {
+        opacity: 0;
+        transform: translateX(40%);
+    } 
+
+    /* finish animation */
+    100% {
+        opacity: 1;
+        transform: translateX(-60%);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    /* transform: translateY(-3px); */
+    /* transition: all .1s ease-in-out; */
+    box-shadow: 5px 10px 10px rgb(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translate(0,-3px);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, .2);
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #777;
+    
+}
+.btn::after {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.btn-white::after {
+    background-color: #ffffff;
+}
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated {
+    animation: moveInLeft .5s ease-in-out .75s;
+    animation-fill-mode: backwards;
 }
